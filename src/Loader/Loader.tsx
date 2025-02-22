@@ -1,12 +1,12 @@
-import  { useState, useEffect } from 'react';
-import './Loader.scss';
+import { useState, useEffect } from "react";
+import "./Loader.scss";
 
 const Loader = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress(prev => {
+      setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
           return 100;

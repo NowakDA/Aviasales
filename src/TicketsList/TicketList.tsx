@@ -6,8 +6,8 @@ import { selectSortedTickets } from "../store/ticketsSlice.ts";
 import TicketItem from "../TicketItem/TicketItem";
 import Loader from "../Loader/Loader";
 import ButtonShowMore from "../ButtonShowMore/ButtonShowMore.tsx";
-import './TicketList.scss'
-import noData from '../assets/empty-box.png'
+import "./TicketList.scss";
+import noData from "../assets/empty-box.png";
 
 const TicketList: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -15,9 +15,8 @@ const TicketList: FC = () => {
   const sortedTickets = useSelector(selectSortedTickets);
   const { visibleTickets } = useSelector((state: RootState) => state.filter);
   const { loading, error, searchId } = useSelector(
-    (state: RootState) => state.tickets
+    (state: RootState) => state.tickets,
   );
-
 
   useEffect(() => {
     dispatch(fetchSearchId());
@@ -46,9 +45,14 @@ const TicketList: FC = () => {
           />
         );
       })}
-     { sortedTickets.length===0 ? <div className="noTickets">
-      <img src={noData}/>
-      Нет билетов, соответствующих выбранным параметрам.</div> :<ButtonShowMore />}
+      {sortedTickets.length === 0 ? (
+        <div className="noTickets">
+          <img src={noData} />
+          Нет билетов, соответствующих выбранным параметрам.
+        </div>
+      ) : (
+        <ButtonShowMore />
+      )}
     </>
   );
 };

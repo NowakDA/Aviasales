@@ -1,5 +1,4 @@
-import {FC} from "react"
-
+import { FC } from "react";
 
 import TicketsSorter from "../TicketsSorter/TicketsSorter.tsx";
 
@@ -8,26 +7,20 @@ import TransferCheckbox from "../TransferCheckbox/TransferCheckbox.tsx";
 import TicketList from "../TicketsList/TicketList";
 import "./App.scss";
 
-
-
 const App: FC = () => {
-
   return (
     <>
       <Header />
-      
+
       <div className="grid-container">
-        
         <TransferCheckbox />
         <div className="second-column">
           <TicketsSorter />
-          <TicketList/>
-          
+          <TicketList />
         </div>
       </div>
     </>
   );
-
-}
+};
 
 export default App;

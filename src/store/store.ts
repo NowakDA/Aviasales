@@ -5,8 +5,8 @@ import ticketReducer from "./ticketsSlice";
 
 export const store = configureStore({
   reducer: {
-    filter: ticketReducer, 
-    tickets: apiReducer, 
+    filter: ticketReducer,
+    tickets: apiReducer,
   },
 });
 

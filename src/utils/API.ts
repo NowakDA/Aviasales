@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://aviasales-test-api.kata.academy',
+  baseURL: "https://aviasales-test-api.kata.academy",
   timeout: 5000,
-  headers: { 'Content-Type': 'application/json' }
+  headers: { "Content-Type": "application/json" },
 });
 
 export default api;

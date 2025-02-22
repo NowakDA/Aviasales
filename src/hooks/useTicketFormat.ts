@@ -23,7 +23,10 @@ const useTicketFormat = () => {
     return result;
   };
 
-  const formatTimeFlight = (departureDate: Date | string, flightDuration: number): string => {
+  const formatTimeFlight = (
+    departureDate: Date | string,
+    flightDuration: number,
+  ): string => {
     const departure = new Date(departureDate);
     const departureTime = format(departure, "HH:mm");
     const arrivalDate = addMinutes(departure, flightDuration);

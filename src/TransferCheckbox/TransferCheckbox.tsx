@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { toggleTransfer } from "../store/ticketsSlice";
-import './TransferCheckbox.scss'
+import "./TransferCheckbox.scss";
 
 function TransferCheckbox() {
   const dispatch = useDispatch();
-  const selectedTransfers = useSelector((state: RootState) => state.filter.selectedTransfers);
+  const selectedTransfers = useSelector(
+    (state: RootState) => state.filter.selectedTransfers,
+  );
 
   const transferOptions = [
     { label: "Все", value: -1 },
@@ -35,6 +37,6 @@ function TransferCheckbox() {
       ))}
     </form>
   );
-};
+}
 
 export default TransferCheckbox;
