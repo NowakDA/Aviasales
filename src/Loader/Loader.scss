@@ -1,22 +1,21 @@
-@use '../scss/variables.scss' as *;
-
+@use "../scss/variables.scss" as *;
 
 .loader-container {
-    position: absolute;
-    top: 59px;
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-  }
-  
-  .progress-bar {
-    width: 100%; 
-    height: 5px; 
-    background-color: #f3f3f3; 
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  position: absolute;
+  top: 59px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   .progress {
     height: 100%;
     background-image: repeating-linear-gradient(
@@ -25,9 +24,8 @@
       $primary-color 10px,
       #fff 10px,
       #fff 20px
-    ); 
+    );
     border-radius: 25px;
     transition: width 0.2s ease-in-out;
   }
-  
-  }
+}

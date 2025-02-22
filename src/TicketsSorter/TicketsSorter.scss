@@ -1,32 +1,30 @@
-@use '../scss/variables' as *;
+@use "../scss/variables" as *;
 
+.Sorter-buttons {
+  max-width: 502px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 1px solid $btn-stroke;
+  background-color: $white;
+  overflow: hidden;
 
-.Sorter-buttons{
-    max-width: 502px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    border: 1px solid $btn-stroke;
-    background-color: $white;
-    overflow: hidden;
-
-    .btn {
-        flex-grow: 1;
-        cursor: pointer;
-        text-transform: uppercase;
-        color:$dark-text;
-        font-weight: bolder;
-        letter-spacing: 0.5px;
-        font-size: 12px;
-        text-align: center;
-        padding: 15px;
-        &:not(:last-child) {
-            border-right: 1px solid $btn-stroke;
-        }
-     &.active{
-        color: $white;
-        background-color: $primary-color;
-     }
+  .btn {
+    flex-grow: 1;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: $dark-text;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    &:not(:last-child) {
+      border-right: 1px solid $btn-stroke;
     }
-    
+    &.active {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
 }
