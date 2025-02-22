@@ -1,0 +1,68 @@
+@use '../scss/variables' as *;
+
+.Transfer-form {
+  display: flex;
+  flex-direction: column;
+  width: 252px;
+  border-radius: 5px;
+  background-color: $white;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  &__description {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 20px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    display: none;
+  }
+}
+
+label {
+  font-size: 13px;
+  line-height: 20px;
+  position: relative;
+  padding: 10px 0 10px 50px;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+  }
+
+  &::before {
+    background-image: url('../assets/Checkbox.svg');
+  }
+
+  &::after {
+    background-image: url('../assets/Checkbox-checked.svg');
+    display: none;
+  }
+
+  &:has(.Transfer-form__checkbox:checked)::before {
+    display: none;
+  }
+  &:has(.Transfer-form__checkbox:checked)::after {
+    display: block;
+  }
+
+  &:hover::after {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,19 @@
+@use '../scss/variables.scss' as *;
+
+.noTickets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size:14px;
+    text-align: center;
+    padding: 15px;
+    font-weight: bolder;
+    color: $light-text;
+
+    & img {
+        width: 150px;
+        height: 150px;
+    }
+
+}
