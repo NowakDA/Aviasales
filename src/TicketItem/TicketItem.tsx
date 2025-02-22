@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./TicketItem.scss";
 import TicketItemInfo from "./TicketItemInfo";
-import { Ticket } from "../hooks/useTickets";
+import { Ticket } from "../store/apiSlice";
 
 interface TicketItemProps {
   price: number;

@@ -13,9 +13,9 @@ const Loader = () => {
         }
         return prev + 1;
       });
-    }, 100); // обновляем прогресс каждую 0.1 секунды
+    }, 100);
 
-    return () => clearInterval(interval); // Очистим интервал при размонтировании
+    return () => clearInterval(interval);
   }, []);
 
   return (
